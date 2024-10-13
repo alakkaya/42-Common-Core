@@ -6,12 +6,11 @@
 /*   By: aliakkay <aliakkay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 12:18:26 by aliakkay          #+#    #+#             */
-/*   Updated: 2024/10/10 13:01:46 by aliakkay         ###   ########.fr       */
+/*   Updated: 2024/10/13 18:57:16 by aliakkay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+
 #include "libft.h"
 
 
