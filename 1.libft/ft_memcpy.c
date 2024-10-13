@@ -6,7 +6,7 @@
 /*   By: aliakkay <aliakkay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 14:32:20 by aliakkay          #+#    #+#             */
-/*   Updated: 2024/10/10 16:20:01 by aliakkay         ###   ########.fr       */
+/*   Updated: 2024/10/13 14:25:01 by aliakkay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ void		*ft_memcpy(void *dst, const void *src, size_t n)
     }
     return(dst);
 }
-
 
 int main(){
 	 char src[] = "kenanali";
