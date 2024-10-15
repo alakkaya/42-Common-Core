@@ -6,7 +6,7 @@
 /*   By: ali <ali@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 12:52:45 by aliakkay          #+#    #+#             */
-/*   Updated: 2024/10/14 20:48:31 by ali              ###   ########.fr       */
+/*   Updated: 2024/10/14 20:54:02 by ali              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int ft_atoi(const char *str);
 char *ft_strchr(const char *s, int c);
 char *ft_strrchr(const char *s, int c);
 char *ft_strnstr(const char *haystack, const char *needle, size_t len);
+char *ft_strdup(const char *s1);
 
 size_t ft_strlen(const char *s);
 size_t ft_strlcpy(char *dst, const char *src, size_t dstsize);
