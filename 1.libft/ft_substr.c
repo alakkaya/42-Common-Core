@@ -6,10 +6,9 @@
 /*   By: aliakkay <aliakkay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 16:08:16 by aliakkay          #+#    #+#             */
-/*   Updated: 2024/10/17 16:08:17 by aliakkay         ###   ########.fr       */
+/*   Updated: 2024/10/17 17:23:41 by aliakkay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 
@@ -44,34 +43,43 @@ size_t ft_strlen(const char *s)
 
 char *ft_strdup(const char *s1)
 {
-    size_t len = ft_strlen(s1) + 1;
-    void *new = malloc(len);
+    size_t i;
+    char *dest;
 
-    if (new == NULL)
-        return (NULL);
-    return (char *)ft_memcpy(new, s1, len);
+    i = 0;
+    while (s1[i])
+        i++;
+    dest = (char *)malloc(sizeof(char) * (i + 1));
+    i = 0;
+
+    // strcpy
+    while (s1[i])
+    {
+        dest[i] = s1[i];
+        i++;
+    }
+    dest[i] = '\0';
+
+    return (dest);
 }
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-    char *substr;
+    char *str;
     size_t i;
 
-    i = 0;
-    if (s[i] == '\0')
+    if (!s)
         return (NULL);
-
-    if (start > len)
-        return ft_strdup(" ");
-
-    substr = malloc((len + 1) * sizeof(char));
-    while (s[i + start] && i < len)
-    {
-        substr[i] = s[start + i];
-        i++;
-    }
-    substr[i] = '\0';
-    return (substr);
+    i = ft_strlen(s) - start;
+    if (len < i)
+        i = len;
+    if (start > ft_strlen(s) - 1)
+        return (ft_strdup(""));
+    str = (char *)malloc(sizeof(char) * (i + 1));
+    if (!str)
+        return (0);
+    ft_strlcpy(str, s + start, i + 1);
+    return (str);
 }
 
 int main()
