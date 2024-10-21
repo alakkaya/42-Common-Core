@@ -6,7 +6,7 @@
 /*   By: aliakkay <aliakkay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 12:52:45 by aliakkay          #+#    #+#             */
-/*   Updated: 2024/10/17 21:08:26 by aliakkay         ###   ########.fr       */
+/*   Updated: 2024/10/21 17:58:35 by aliakkay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len);
 char *ft_strjoin(char const *s1, char const *s2);
 char *ft_strtrim(char const *s1, char const *set);
 char **ft_split(char const *s, char c);
+char *ft_itoa(int n);
 
 size_t ft_strlen(const char *s);
 size_t ft_strlcpy(char *dst, const char *src, size_t dstsize);
