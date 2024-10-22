@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aliakkay <aliakkay@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ali <ali@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 17:58:07 by aliakkay          #+#    #+#             */
-/*   Updated: 2024/10/21 18:38:49 by aliakkay         ###   ########.fr       */
+/*   Updated: 2024/10/22 16:17:38 by ali              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ char *ft_itoa(int n)
 
 	len = 0;
 	is_negative = 0;
+	temp = 0;
 
 	// 1. Negatif kontrolü
 	if (n < 0)
@@ -51,15 +52,17 @@ char *ft_itoa(int n)
 
 	// 4. Sayıyı karakter dizisine yaz
 	str[len + is_negative] = '\0'; // Null terminatör ekle
-    while (len > 0) {
-        str[len + is_negative - 1] = (n % 10) + '0'; // Rakamı al ve karakter dizisine yaz
-        n /= 10;
-        len--;
-    }
+	while (len > 0)
+	{
+		str[len + is_negative - 1] = (n % 10) + '0'; // Rakamı al ve karakter dizisine yaz
+		n /= 10;
+		len--;
+	}
 	// 5. Negatif işaret ekle
-    if (is_negative) {
-        str[0] = '-';
-    }
+	if (is_negative)
+	{
+		str[0] = '-';
+	}
 
-    return str;
+	return str;
 }
