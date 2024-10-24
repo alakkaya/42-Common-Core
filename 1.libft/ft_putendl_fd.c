@@ -1,40 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aliakkay <aliakkay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/13 19:53:42 by aliakkay          #+#    #+#             */
-/*   Updated: 2024/10/24 19:47:01 by aliakkay         ###   ########.fr       */
+/*   Created: 2024/10/24 19:11:07 by aliakkay          #+#    #+#             */
+/*   Updated: 2024/10/24 19:44:19 by aliakkay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+#include <fcntl.h>
+
+void ft_putendl_fd(char *s, int fd)
 {
-	size_t i;
+    size_t  i;
 
-	i = 0;
-
-	while (i < n)
-	{
-		if (((unsigned char *)s1)[i] != ((unsigned char *)s2)[i])
-		{
-			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
-		}
-		i++;
-		
-	}
-	return (0);
+    i = 0;
+    while (s[i])
+    {
+        write(fd,&s[i],1);
+        i++;
+    }
+    write(fd,"\n",1);
 }
-
-int main(){
-	 int *s = 123;
-	 int *d = 213;
-
-	printf("%d",ft_memcmp(s,d,123));
-	printf("%d",memcmp(s,d,123));
-
-	
+int main()
+{
+    int fd = open("alı.text", O_WRONLY | O_CREAT | O_APPEND, 0644);
+    ft_putendl_fd("aliakkaya",fd);
 }

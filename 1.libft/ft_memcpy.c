@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ali <ali@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: aliakkay <aliakkay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 14:32:20 by aliakkay          #+#    #+#             */
-/*   Updated: 2024/10/22 16:18:31 by ali              ###   ########.fr       */
+/*   Updated: 2024/10/24 19:45:07 by aliakkay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ void *ft_memcpy(void *dst, const void *src, size_t n)
     return (dst);
 }
 
-// int main(){
-// 	 char src[] = "kenanali";
-//     char dst[10] = "aliakkaya";
+int main(){
+	 char src[] = "1";
+    char dst[10] = "aliakkaya";
 
-// 	printf("%s",ft_memcpy(dst,src,3));
-// }
+	printf("%s",ft_memcpy(dst,src,3));
+}
