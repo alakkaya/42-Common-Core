@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ali <ali@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: aliakkay <aliakkay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 12:52:45 by aliakkay          #+#    #+#             */
-/*   Updated: 2024/10/22 16:12:30 by ali              ###   ########.fr       */
+/*   Updated: 2024/10/24 19:02:44 by aliakkay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,6 @@ void *ft_memcpy(void *dst, const void *src, size_t n);
 void *ft_memmove(void *dst, const void *src, size_t len);
 void *ft_memchr(const void *s, int c, size_t n);
 void *ft_calloc(size_t count, size_t size);
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 #endif
