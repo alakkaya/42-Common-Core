@@ -6,7 +6,7 @@
 /*   By: aliakkay <aliakkay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 19:53:42 by aliakkay          #+#    #+#             */
-/*   Updated: 2024/10/24 19:47:01 by aliakkay         ###   ########.fr       */
+/*   Updated: 2024/10/24 21:15:54 by aliakkay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,12 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 	return (0);
 }
 
-int main(){
-	 int *s = 123;
-	 int *d = 213;
+// int main(){
+// 	 int *s = 123;
+// 	 int *d = 213;
 
-	printf("%d",ft_memcmp(s,d,123));
-	printf("%d",memcmp(s,d,123));
+// 	printf("%d",ft_memcmp(s,d,123));
+// 	printf("%d",memcmp(s,d,123));
 
 	
-}
+// }

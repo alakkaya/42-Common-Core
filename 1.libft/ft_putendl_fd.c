@@ -6,7 +6,7 @@
 /*   By: aliakkay <aliakkay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 19:11:07 by aliakkay          #+#    #+#             */
-/*   Updated: 2024/10/24 19:44:19 by aliakkay         ###   ########.fr       */
+/*   Updated: 2024/10/24 21:22:31 by aliakkay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ void ft_putendl_fd(char *s, int fd)
     }
     write(fd,"\n",1);
 }
-int main()
-{
-    int fd = open("alı.text", O_WRONLY | O_CREAT | O_APPEND, 0644);
-    ft_putendl_fd("aliakkaya",fd);
-}
+// int main()
+// {
+//     int fd = open("alı.text", O_WRONLY | O_CREAT | O_APPEND, 0644);
+//     ft_putendl_fd("aliakkaya",fd);
+// }
