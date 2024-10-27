@@ -6,63 +6,47 @@
 /*   By: ali <ali@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 17:58:07 by aliakkay          #+#    #+#             */
-/*   Updated: 2024/10/22 16:17:38 by ali              ###   ########.fr       */
+/*   Updated: 2024/10/27 18:39:01 by ali              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_itoa(int n)
+static int ft_len(int nbr)
 {
-	char *str;
-	int len, temp, is_negative;
+	int len;
 
 	len = 0;
-	is_negative = 0;
-	temp = 0;
-
-	// 1. Negatif kontrolü
-	if (n < 0)
+	len = (nbr <= 0 ? 1 : 0);
+	while (nbr != 0)
 	{
-		is_negative = 1;
-		n = -n; // Sayıyı pozitif yap
-	}
-	else if (n == 0)
-	{
-		// Eğer sayı 0 ise direkt "0" döndür
-		str = (char *)malloc(sizeof(char) * 2);
-		if (str)
-		{
-			str[0] = '0';
-			str[1] = '\0';
-		}
-		return str;
-	}
-
-	// 2. Rakam sayısını belirle
-	while (temp > 0)
-	{
+		nbr = nbr / 10;
 		len++;
-		temp /= 10;
 	}
-	// 3. Bellek ayır
-	str = (char *)malloc(sizeof(char) * (len + is_negative + 1));
-	if (!str)
-		return NULL;
+	return (len);
+}
 
-	// 4. Sayıyı karakter dizisine yaz
-	str[len + is_negative] = '\0'; // Null terminatör ekle
-	while (len > 0)
+char *ft_itoa(int n)
+{
+	unsigned int nbr;
+	int sign;
+	int len;
+	char *alpha;
+
+	sign = (n < 0 ? 1 : 0);
+	alpha = NULL;
+	len = ft_len(n);
+	nbr = (n < 0 ? -n : n);
+	if ((alpha = malloc(sizeof(char) * len + 1)) == NULL)
+		return (NULL);
+	alpha[len--] = '\0';
+	while (len >= 0)
 	{
-		str[len + is_negative - 1] = (n % 10) + '0'; // Rakamı al ve karakter dizisine yaz
-		n /= 10;
+		alpha[len] = nbr % 10 + '0';
+		nbr /= 10;
 		len--;
 	}
-	// 5. Negatif işaret ekle
-	if (is_negative)
-	{
-		str[0] = '-';
-	}
-
-	return str;
+	if (sign == 1)
+		alpha[0] = '-';
+	return (alpha);
 }
