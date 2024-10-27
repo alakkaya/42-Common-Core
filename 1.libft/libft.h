@@ -6,7 +6,7 @@
 /*   By: aliakkay <aliakkay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 12:52:45 by aliakkay          #+#    #+#             */
-/*   Updated: 2024/10/27 15:52:33 by aliakkay         ###   ########.fr       */
+/*   Updated: 2024/10/27 16:13:50 by aliakkay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,6 @@ int ft_lstsize(t_list *lst);
 t_list *ft_lstlast(t_list *lst);
 void ft_lstadd_back(t_list **lst, t_list *new);
 void ft_lstdelone(t_list *lst, void (*del)(void*));
-
+void ft_lstclear(t_list **lst, void (*del)(void*));
+void ft_lstiter(t_list *lst, void (*f)(void *));
 #endif
