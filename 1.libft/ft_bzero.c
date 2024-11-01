@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aliakkay <aliakkay@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ali <ali@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 13:50:14 by aliakkay          #+#    #+#             */
-/*   Updated: 2024/10/17 17:34:17 by aliakkay         ###   ########.fr       */
+/*   Updated: 2024/10/27 19:28:23 by ali              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)
@@ -22,12 +22,4 @@ void ft_bzero(void *s, size_t n)
 		((unsigned char *)s)[i] = '\0';
 		i++;
 	}
-}
-
-int main()
-{
-	char str[] = "kenanali";
-	// ft_bzero(str,4);
-	bzero(str, 2);
-	printf("%s \n", str);
 }

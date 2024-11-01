@@ -6,47 +6,52 @@
 /*   By: ali <ali@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 17:58:07 by aliakkay          #+#    #+#             */
-/*   Updated: 2024/10/27 18:39:01 by ali              ###   ########.fr       */
+/*   Updated: 2024/11/01 15:52:08 by ali              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int ft_len(int nbr)
+static int	ft_numlen(int num)
 {
-	int len;
+	int	i;
 
-	len = 0;
-	len = (nbr <= 0 ? 1 : 0);
-	while (nbr != 0)
+	if (num == 0)
+		return (1);
+	i = 0;
+	while (num > 0 || num < 0)
 	{
-		nbr = nbr / 10;
-		len++;
+		num /= 10;
+		i++;
 	}
-	return (len);
+	return (i);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	unsigned int nbr;
-	int sign;
-	int len;
-	char *alpha;
+	int		len;
+	char	*dizi;
+	long	nbr;
 
-	sign = (n < 0 ? 1 : 0);
-	alpha = NULL;
-	len = ft_len(n);
-	nbr = (n < 0 ? -n : n);
-	if ((alpha = malloc(sizeof(char) * len + 1)) == NULL)
-		return (NULL);
-	alpha[len--] = '\0';
-	while (len >= 0)
+	nbr = n;
+	len = ft_numlen(nbr);
+	if (n < 0)
 	{
-		alpha[len] = nbr % 10 + '0';
-		nbr /= 10;
-		len--;
+		len++;
+		nbr = -nbr;
 	}
-	if (sign == 1)
-		alpha[0] = '-';
-	return (alpha);
+	dizi = malloc(sizeof(char) * len + 1);
+	if (!dizi)
+		return (NULL);
+	dizi[len] = '\0';
+	while (nbr > 0)
+	{
+		dizi[--len] = nbr % 10 + 48;
+		nbr /= 10;
+	}
+	if (n < 0)
+		dizi[0] = '-';
+	if (n == 0)
+		dizi[0] = '0';
+	return (dizi);
 }

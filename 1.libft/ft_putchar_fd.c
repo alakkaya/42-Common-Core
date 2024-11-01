@@ -3,22 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aliakkay <aliakkay@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ali <ali@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 19:11:07 by aliakkay          #+#    #+#             */
-/*   Updated: 2024/10/24 21:28:25 by aliakkay         ###   ########.fr       */
+/*   Updated: 2024/11/01 15:33:56 by ali              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <fcntl.h>
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
-    write(fd,&c,1);
+	write(fd, &c, 1);
 }
-// int main()
-// {
-//     int fd = open("alı.text", O_WRONLY | O_CREAT | O_APPEND, 0644);
-//     ft_putchar_fd('a',fd);
-// }

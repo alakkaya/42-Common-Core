@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aliakkay <aliakkay@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ali <ali@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 12:18:26 by aliakkay          #+#    #+#             */
-/*   Updated: 2024/10/17 19:55:54 by aliakkay         ###   ########.fr       */
+/*   Updated: 2024/10/27 19:22:48 by ali              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
-
 
 size_t	ft_strlen(const char *s)
 {
@@ -25,11 +23,3 @@ size_t	ft_strlen(const char *s)
 	}
 	return (i);
 }
-
-// int main(){
-// 	char c[] = "ali ak!";
-
-// 	printf("%zu \n",ft_strlen(c));
-// 	printf("%lu",strlen(c));
-
-// }
