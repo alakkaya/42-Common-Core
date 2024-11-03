@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ali <ali@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: aliakkay <aliakkay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 16:08:16 by aliakkay          #+#    #+#             */
-/*   Updated: 2024/10/27 20:09:17 by ali              ###   ########.fr       */
+/*   Updated: 2024/11/03 19:35:22 by aliakkay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!str)
 		return (0);
 	ft_strlcpy(str, s + start, i + 1);
+	str[i] = '\0';
 	return (str);
 }
