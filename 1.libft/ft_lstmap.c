@@ -6,7 +6,7 @@
 /*   By: aliakkay <aliakkay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 16:21:14 by aliakkay          #+#    #+#             */
-/*   Updated: 2024/11/09 13:37:53 by aliakkay         ###   ########.fr       */
+/*   Updated: 2024/11/09 13:42:59 by aliakkay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_list;
 	t_list	*new_node;
-	
-	if(!lst ||!f)
+
+	if (!lst || !f)
 		return (NULL);
 	new_list = NULL;
 	while (lst)
